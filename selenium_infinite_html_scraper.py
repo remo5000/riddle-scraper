@@ -24,6 +24,3 @@ def scrape_url_to_html(url, number_of_scrolls = 30):
     html_string = driver.page_source
     driver.quit()
     return html_string
-
-html_string = scrape_url_to_html("https://riddles.fyi/", 5)
-print(html_string)
