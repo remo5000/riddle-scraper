@@ -3,7 +3,7 @@ from selenium.webdriver.common.keys import Keys
 from time import sleep
 from config import path_to_chromedriver
  
-def scrape_url_to_html(url, number_of_scrolls = 30):
+def scrape_url_to_html(url, number_of_scrolls = 5):
  
     # Load WebDriver and navigate to the page url.
     # This will open a browser window.
@@ -16,7 +16,7 @@ def scrape_url_to_html(url, number_of_scrolls = 30):
         # Find the first element on the page, so we can scroll down using the
         # element object's send_keys() method
         elem = driver.find_element_by_tag_name('a')
-        elem.send_keys(Keys.PAGE_DOWN)
+        elem.send_keys(Keys.END)
         # Wait 3 seconds for the infinitely loading page to load.
         sleep(3)
      

@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup 
 from selenium_infinite_html_scraper import scrape_url_to_html
 
-page_content = scrape_url_to_html("https://riddles.fyi/", 5)
+page_content = scrape_url_to_html("https://riddles.fyi/", 20)
 soup = BeautifulSoup(page_content, 'html.parser')
 articles = soup.find_all('article')
 riddles = {}
